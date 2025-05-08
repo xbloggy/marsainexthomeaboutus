@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mars AI Explorer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+      transition: background-color 0.3s, color 0.3s;
+    }
+
+    .mars-fly {
+      position: fixed;
+      top: 15%;
+      left: 60%;
+      width: 70px;
+      height: 70px;
+      z-index: 50;
+      animation: orbit 25s linear infinite;
+      pointer-events: none;
+    }
+
+    @keyframes orbit {
+      0% {
+        transform: translate(-50%, 0) rotate(0deg) translateX(180px) rotate(0deg);
+      }
+      100% {
+        transform: translate(-50%, 0) rotate(360deg) translateX(180px) rotate(-360deg);
+      }
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white font-sans">
+
+  <!-- Flying Mars Object -->
+  <div class="mars-fly">
+    <img src="https://i.ibb.co/NLg45t7/mars-icon.png" alt="Flying Mars" class="w-full h-full object-contain">
+  </div>
+
+  <!-- Header -->
+  <header class="p-6 flex items-center justify-between bg-gray-800 shadow-lg">
+    <h1 class="text-3xl font-bold text-red-400">Mars AI Explorer</h1>
+    <nav class="space-x-4 hidden md:flex">
+      <a href="#overview" class="hover:text-red-400">Overview</a>
+      <a href="#data" class="hover:text-red-400">Mars Data</a>
+      <a href="#learn" class="hover:text-red-400">Learn AI</a>
+      <a href="#about" class="hover:text-red-400">About</a>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="overview" class="min-h-screen flex flex-col items-center justify-center text-center px-4">
+    <h2 class="text-5xl font-bold mb-4 text-red-400">Explore the Red Planet with AI</h2>
+    <p class="text-lg text-gray-300 max-w-2xl mb-6">Dive into Mars exploration data, analyze patterns, and simulate life on Mars using intelligent tools.</p>
+    <a href="#data" class="px-6 py-3 bg-red-500 text-white rounded-xl hover:bg-red-600 transition-all">Start Exploring</a>
+  </section>
+
+  <!-- Data Section -->
+  <section id="data" class="py-20 bg-gray-950 text-center px-4">
+    <h3 class="text-3xl font-bold mb-8 text-red-400">Mars Data Insights</h3>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
+      <div class="bg-gray-800 p-6 rounded-2xl shadow-lg hover:bg-gray-700 transition">
+        <h4 class="text-xl font-semibold text-white mb-2">Surface Maps</h4>
+        <p class="text-gray-400">View topographic and geological data of Mars captured by satellites.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-2xl shadow-lg hover:bg-gray-700 transition">
+        <h4 class="text-xl font-semibold text-white mb-2">Climate Models</h4>
+        <p class="text-gray-400">Analyze temperature shifts, dust storms, and seasonal cycles on Mars.</p>
+      </div>
+      <div class="bg-gray-800 p-6 rounded-2xl shadow-lg hover:bg-gray-700 transition">
+        <h4 class="text-xl font-semibold text-white mb-2">AI Simulations</h4>
+        <p class="text-gray-400">Use AI to simulate colonization, habitats, and survival strategies.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Learning Section -->
+  <section id="learn" class="py-20 bg-gray-900 text-center px-4">
+    <h3 class="text-3xl font-bold mb-6 text-red-400">Learn How AI Helps Mars Research</h3>
+    <p class="text-gray-300 max-w-xl mx-auto mb-8">Step-by-step guides, open datasets, and interactive tools to help you learn machine learning and apply it to Martian data.</p>
+    <a href="https://www.kaggle.com/datasets?search=mars" target="_blank" class="px-6 py-3 bg-red-500 text-white rounded-xl hover:bg-red-600 transition-all">View Mars Datasets</a>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 bg-gray-950 text-center px-4">
+    <h3 class="text-3xl font-bold mb-4 text-red-400">About This Project</h3>
+    <p class="text-gray-400 max-w-2xl mx-auto">Mars AI Explorer is a student-led initiative that combines curiosity about space with the power of artificial intelligence. Our goal is to make Mars data more accessible and fun to explore.</p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-800 text-center p-6 text-gray-400">
+    <p>© 2025 Mars AI Explorer • Built with Tailwind CSS • Powered by Open Curiosity</p>
+  </footer>
+
+</body>
+</html>
